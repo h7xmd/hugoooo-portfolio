@@ -14,7 +14,156 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      contact_messages: {
+        Row: {
+          created_at: string | null
+          email: string
+          id: string
+          message: string
+          name: string
+        }
+        Insert: {
+          created_at?: string | null
+          email: string
+          id?: string
+          message: string
+          name: string
+        }
+        Update: {
+          created_at?: string | null
+          email?: string
+          id?: string
+          message?: string
+          name?: string
+        }
+        Relationships: []
+      }
+      portfolio_fun: {
+        Row: {
+          created_at: string | null
+          description: string | null
+          icon: string | null
+          id: string
+          title: string
+          type: string
+        }
+        Insert: {
+          created_at?: string | null
+          description?: string | null
+          icon?: string | null
+          id?: string
+          title: string
+          type: string
+        }
+        Update: {
+          created_at?: string | null
+          description?: string | null
+          icon?: string | null
+          id?: string
+          title?: string
+          type?: string
+        }
+        Relationships: []
+      }
+      portfolio_me: {
+        Row: {
+          avatar_url: string | null
+          bio: string | null
+          created_at: string | null
+          id: string
+          main_skills: string[] | null
+          name: string
+          social_email: string | null
+          social_github: string | null
+          social_linkedin: string | null
+          updated_at: string | null
+        }
+        Insert: {
+          avatar_url?: string | null
+          bio?: string | null
+          created_at?: string | null
+          id?: string
+          main_skills?: string[] | null
+          name: string
+          social_email?: string | null
+          social_github?: string | null
+          social_linkedin?: string | null
+          updated_at?: string | null
+        }
+        Update: {
+          avatar_url?: string | null
+          bio?: string | null
+          created_at?: string | null
+          id?: string
+          main_skills?: string[] | null
+          name?: string
+          social_email?: string | null
+          social_github?: string | null
+          social_linkedin?: string | null
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
+      portfolio_projects: {
+        Row: {
+          category: string | null
+          created_at: string | null
+          description: string | null
+          github_url: string | null
+          id: string
+          image_url: string | null
+          live_url: string | null
+          name: string
+          technologies: string[] | null
+        }
+        Insert: {
+          category?: string | null
+          created_at?: string | null
+          description?: string | null
+          github_url?: string | null
+          id?: string
+          image_url?: string | null
+          live_url?: string | null
+          name: string
+          technologies?: string[] | null
+        }
+        Update: {
+          category?: string | null
+          created_at?: string | null
+          description?: string | null
+          github_url?: string | null
+          id?: string
+          image_url?: string | null
+          live_url?: string | null
+          name?: string
+          technologies?: string[] | null
+        }
+        Relationships: []
+      }
+      portfolio_skills: {
+        Row: {
+          category: string
+          created_at: string | null
+          id: string
+          level: number | null
+          name: string
+        }
+        Insert: {
+          category: string
+          created_at?: string | null
+          id?: string
+          level?: number | null
+          name: string
+        }
+        Update: {
+          category?: string
+          created_at?: string | null
+          id?: string
+          level?: number | null
+          name?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
