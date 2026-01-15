@@ -8,29 +8,29 @@ const socialLinks = [
   {
     icon: Github,
     name: "GitHub",
-    handle: "@yourname",
+    handle: "@seunome",
     url: "https://github.com",
     color: "hover:text-foreground",
   },
   {
     icon: Linkedin,
     name: "LinkedIn",
-    handle: "Your Name",
+    handle: "Seu Nome",
     url: "https://linkedin.com",
     color: "hover:text-blue-600",
   },
   {
     icon: Twitter,
     name: "Twitter",
-    handle: "@yourhandle",
+    handle: "@seuhandle",
     url: "https://twitter.com",
     color: "hover:text-sky-500",
   },
   {
     icon: Mail,
     name: "Email",
-    handle: "hello@example.com",
-    url: "mailto:hello@example.com",
+    handle: "ola@exemplo.com",
+    url: "mailto:ola@exemplo.com",
     color: "hover:text-primary",
   },
 ];
@@ -46,38 +46,38 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
-      title: "Message sent! 🎉",
-      description: "Thanks for reaching out. I'll get back to you soon!",
+      title: "Mensagem enviada! 🎉",
+      description: "Obrigado por entrar em contato. Responderei em breve!",
     });
     setFormData({ name: "", email: "", message: "" });
   };
 
   return (
     <PageLayout 
-      title="Get in Touch" 
-      subtitle="Let's build something amazing together"
+      title="Entre em Contato" 
+      subtitle="Vamos construir algo incrível juntos"
     >
       <div className="grid lg:grid-cols-2 gap-12">
-        {/* Contact Form */}
+        {/* Formulário de Contato */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <form onSubmit={handleSubmit} className="glass-card rounded-3xl p-8">
-            <h3 className="text-xl font-bold text-foreground mb-6">Send a Message</h3>
+            <h3 className="text-xl font-bold text-foreground mb-6">Enviar Mensagem</h3>
             
             <div className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-foreground mb-2">
-                  Name
+                  Nome
                 </label>
                 <input
                   type="text"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full input-glass rounded-xl px-5 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none"
-                  placeholder="John Doe"
+                  placeholder="João Silva"
                   required
                 />
               </div>
@@ -91,20 +91,20 @@ const Contact = () => {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full input-glass rounded-xl px-5 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none"
-                  placeholder="john@example.com"
+                  placeholder="joao@exemplo.com"
                   required
                 />
               </div>
               
               <div>
                 <label className="block text-sm font-medium text-foreground mb-2">
-                  Message
+                  Mensagem
                 </label>
                 <textarea
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full input-glass rounded-xl px-5 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none min-h-[150px] resize-none"
-                  placeholder="Tell me about your project..."
+                  placeholder="Conte-me sobre seu projeto..."
                   required
                 />
               </div>
@@ -116,28 +116,28 @@ const Contact = () => {
                 className="w-full bg-gradient-to-r from-primary to-accent text-primary-foreground font-semibold py-4 rounded-xl flex items-center justify-center gap-2 shadow-glow hover:shadow-lg transition-shadow"
               >
                 <Send className="w-5 h-5" />
-                Send Message
+                Enviar Mensagem
               </motion.button>
             </div>
           </form>
         </motion.div>
 
-        {/* Contact Info & Social Links */}
+        {/* Informações de Contato & Redes Sociais */}
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="space-y-8"
         >
-          {/* Info Cards */}
+          {/* Cards de Informação */}
           <div className="grid gap-4">
             <div className="glass-card rounded-2xl p-6 flex items-center gap-4">
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-pastel-blue to-pastel-purple flex items-center justify-center">
                 <MapPin className="w-6 h-6 text-foreground/80" />
               </div>
               <div>
-                <p className="text-sm text-muted-foreground">Location</p>
-                <p className="text-foreground font-medium">San Francisco, CA</p>
+                <p className="text-sm text-muted-foreground">Localização</p>
+                <p className="text-foreground font-medium">São Paulo, Brasil</p>
               </div>
             </div>
             
@@ -146,15 +146,15 @@ const Contact = () => {
                 <Clock className="w-6 h-6 text-foreground/80" />
               </div>
               <div>
-                <p className="text-sm text-muted-foreground">Response Time</p>
-                <p className="text-foreground font-medium">Usually within 24 hours</p>
+                <p className="text-sm text-muted-foreground">Tempo de Resposta</p>
+                <p className="text-foreground font-medium">Geralmente em 24 horas</p>
               </div>
             </div>
           </div>
 
-          {/* Social Links */}
+          {/* Redes Sociais */}
           <div className="glass-card rounded-3xl p-8">
-            <h3 className="text-xl font-bold text-foreground mb-6">Connect with me</h3>
+            <h3 className="text-xl font-bold text-foreground mb-6">Conecte-se comigo</h3>
             <div className="space-y-4">
               {socialLinks.map((link, index) => (
                 <motion.a

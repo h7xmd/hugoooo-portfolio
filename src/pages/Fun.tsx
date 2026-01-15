@@ -5,64 +5,64 @@ import { Coffee, Music, Gamepad2, Book, Camera, Plane } from "lucide-react";
 const hobbies = [
   {
     icon: Coffee,
-    title: "Coffee Enthusiast",
-    description: "Exploring specialty coffee from around the world",
+    title: "Entusiasta de Café",
+    description: "Explorando cafés especiais de todo o mundo",
     color: "from-amber-200 to-amber-400",
     emoji: "☕",
   },
   {
     icon: Music,
-    title: "Music Lover",
-    description: "From lo-fi beats to electronic music",
+    title: "Amante de Música",
+    description: "De lo-fi beats a música eletrônica",
     color: "from-pastel-purple to-pastel-pink",
     emoji: "🎵",
   },
   {
     icon: Gamepad2,
-    title: "Gaming",
-    description: "RPGs and indie games on weekends",
+    title: "Games",
+    description: "RPGs e jogos indie nos fins de semana",
     color: "from-pastel-blue to-pastel-mint",
     emoji: "🎮",
   },
   {
     icon: Book,
-    title: "Reading",
-    description: "Sci-fi novels and tech blogs",
+    title: "Leitura",
+    description: "Ficção científica e blogs de tecnologia",
     color: "from-pastel-mint to-emerald-300",
     emoji: "📚",
   },
   {
     icon: Camera,
-    title: "Photography",
-    description: "Capturing urban landscapes and nature",
+    title: "Fotografia",
+    description: "Capturando paisagens urbanas e natureza",
     color: "from-pastel-pink to-pastel-peach",
     emoji: "📸",
   },
   {
     icon: Plane,
-    title: "Travel",
-    description: "Exploring new cultures and cuisines",
+    title: "Viagens",
+    description: "Explorando novas culturas e culinárias",
     color: "from-pastel-blue to-sky-300",
     emoji: "✈️",
   },
 ];
 
 const funFacts = [
-  { fact: "First line of code written at age 12", emoji: "👶" },
-  { fact: "Can solve a Rubik's cube in under 2 minutes", emoji: "🧊" },
-  { fact: "Visited 15+ countries", emoji: "🌍" },
-  { fact: "Built my first robot using Arduino", emoji: "🤖" },
-  { fact: "Dark mode enthusiast (obviously)", emoji: "🌙" },
-  { fact: "Keyboard shortcuts for everything", emoji: "⌨️" },
+  { fact: "Primeira linha de código aos 12 anos", emoji: "👶" },
+  { fact: "Resolvo cubo mágico em menos de 2 minutos", emoji: "🧊" },
+  { fact: "Visitei mais de 15 países", emoji: "🌍" },
+  { fact: "Construí meu primeiro robô com Arduino", emoji: "🤖" },
+  { fact: "Entusiasta do modo escuro (obviamente)", emoji: "🌙" },
+  { fact: "Atalhos de teclado para tudo", emoji: "⌨️" },
 ];
 
 const Fun = () => {
   return (
     <PageLayout 
-      title="Fun & Hobbies" 
-      subtitle="Beyond the code - what makes me tick"
+      title="Diversão & Hobbies" 
+      subtitle="Além do código - o que me motiva"
     >
-      {/* Hobbies Grid */}
+      {/* Grid de Hobbies */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
         {hobbies.map((hobby, index) => (
           <motion.div
@@ -73,7 +73,7 @@ const Fun = () => {
             whileHover={{ y: -8, scale: 1.02 }}
             className="glass-card rounded-3xl overflow-hidden group cursor-pointer"
           >
-            {/* Header with gradient */}
+            {/* Cabeçalho com gradiente */}
             <div className={`h-24 bg-gradient-to-r ${hobby.color} flex items-center justify-center relative overflow-hidden`}>
               <motion.span 
                 className="text-5xl"
@@ -92,7 +92,7 @@ const Fun = () => {
               </motion.span>
             </div>
             
-            {/* Content */}
+            {/* Conteúdo */}
             <div className="p-6">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center">
@@ -110,13 +110,13 @@ const Fun = () => {
         ))}
       </div>
 
-      {/* Fun Facts */}
+      {/* Fatos Divertidos */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.8 }}
       >
-        <h3 className="text-2xl font-bold text-foreground mb-6">Fun Facts</h3>
+        <h3 className="text-2xl font-bold text-foreground mb-6">Fatos Divertidos</h3>
         <div className="glass-card rounded-3xl p-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {funFacts.map((item, index) => (
@@ -156,7 +156,7 @@ const Fun = () => {
         >
           <span className="text-6xl cursor-pointer hover:animate-spin">🎉</span>
         </motion.div>
-        <p className="text-muted-foreground mt-4 text-sm">You found the Easter egg!</p>
+        <p className="text-muted-foreground mt-4 text-sm">Você encontrou o Easter egg!</p>
       </motion.div>
     </PageLayout>
   );

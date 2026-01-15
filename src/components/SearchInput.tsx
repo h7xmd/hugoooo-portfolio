@@ -28,7 +28,7 @@ const SearchInput = () => {
           <Sparkles className="w-5 h-5 text-primary/60" />
           <input
             type="text"
-            placeholder="Ask me anything..."
+            placeholder="Me pergunte qualquer coisa..."
             className="flex-1 bg-transparent outline-none text-foreground placeholder:text-muted-foreground text-base"
             onFocus={() => setIsFocused(true)}
             onBlur={() => setIsFocused(false)}

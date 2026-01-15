@@ -5,48 +5,48 @@ import { useState } from "react";
 
 const projects = [
   {
-    title: "AI Chat Assistant",
-    description: "A conversational AI assistant built with modern LLM technologies, featuring real-time responses and context awareness.",
+    title: "Assistente IA de Chat",
+    description: "Um assistente de IA conversacional construído com tecnologias LLM modernas, com respostas em tempo real e consciência de contexto.",
     image: "🤖",
     technologies: ["React", "Node.js", "OpenAI", "TypeScript"],
-    category: "AI",
+    category: "IA",
     featured: true,
   },
   {
-    title: "E-Commerce Platform",
-    description: "Full-stack e-commerce solution with payment integration, inventory management, and analytics dashboard.",
+    title: "Plataforma E-Commerce",
+    description: "Solução completa de e-commerce com integração de pagamentos, gestão de estoque e painel de análises.",
     image: "🛒",
     technologies: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
     category: "Web",
     featured: true,
   },
   {
-    title: "Portfolio Generator",
-    description: "Automated portfolio website generator that creates stunning personal sites from templates.",
+    title: "Gerador de Portfólio",
+    description: "Gerador automatizado de sites de portfólio que cria sites pessoais impressionantes a partir de templates.",
     image: "✨",
     technologies: ["React", "Framer Motion", "Tailwind", "Vite"],
-    category: "Tools",
+    category: "Ferramentas",
     featured: false,
   },
   {
-    title: "Data Visualization Dashboard",
-    description: "Interactive dashboard for visualizing complex datasets with real-time updates and custom charts.",
+    title: "Dashboard de Visualização",
+    description: "Dashboard interativo para visualização de datasets complexos com atualizações em tempo real e gráficos personalizados.",
     image: "📊",
     technologies: ["React", "D3.js", "Python", "FastAPI"],
-    category: "Data",
+    category: "Dados",
     featured: false,
   },
   {
-    title: "Mobile Fitness App",
-    description: "Cross-platform fitness tracking application with workout plans and progress monitoring.",
+    title: "App Fitness Mobile",
+    description: "Aplicativo de rastreamento de fitness multiplataforma com planos de treino e monitoramento de progresso.",
     image: "💪",
     technologies: ["React Native", "Firebase", "TypeScript"],
     category: "Mobile",
     featured: true,
   },
   {
-    title: "Smart Home Controller",
-    description: "IoT dashboard for managing smart home devices with voice control and automation rules.",
+    title: "Controlador Casa Inteligente",
+    description: "Dashboard IoT para gerenciar dispositivos de casa inteligente com controle por voz e regras de automação.",
     image: "🏠",
     technologies: ["Vue.js", "Node.js", "MQTT", "WebSocket"],
     category: "IoT",
@@ -54,21 +54,21 @@ const projects = [
   },
 ];
 
-const categories = ["All", "AI", "Web", "Tools", "Data", "Mobile", "IoT"];
+const categories = ["Todos", "IA", "Web", "Ferramentas", "Dados", "Mobile", "IoT"];
 
 const Projects = () => {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeCategory, setActiveCategory] = useState("Todos");
 
-  const filteredProjects = activeCategory === "All" 
+  const filteredProjects = activeCategory === "Todos" 
     ? projects 
     : projects.filter(p => p.category === activeCategory);
 
   return (
     <PageLayout 
-      title="Projects" 
-      subtitle="A collection of my recent work and side projects"
+      title="Projetos" 
+      subtitle="Uma coleção dos meus trabalhos recentes e projetos pessoais"
     >
-      {/* Category Filter */}
+      {/* Filtro de Categorias */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -90,7 +90,7 @@ const Projects = () => {
         ))}
       </motion.div>
 
-      {/* Projects Grid */}
+      {/* Grid de Projetos */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredProjects.map((project, index) => (
           <motion.div
@@ -101,7 +101,7 @@ const Projects = () => {
             whileHover={{ y: -8 }}
             className="glass-card rounded-3xl overflow-hidden group cursor-pointer"
           >
-            {/* Project Image/Icon */}
+            {/* Imagem/Ícone do Projeto */}
             <div className="h-48 bg-gradient-to-br from-pastel-blue via-pastel-purple to-pastel-pink flex items-center justify-center relative overflow-hidden">
               <span className="text-7xl group-hover:scale-110 transition-transform duration-500">
                 {project.image}
@@ -109,12 +109,12 @@ const Projects = () => {
               {project.featured && (
                 <div className="absolute top-4 right-4 glass-card px-3 py-1 rounded-full flex items-center gap-1">
                   <Star className="w-3 h-3 text-amber-500 fill-amber-500" />
-                  <span className="text-xs font-medium">Featured</span>
+                  <span className="text-xs font-medium">Destaque</span>
                 </div>
               )}
             </div>
             
-            {/* Project Content */}
+            {/* Conteúdo do Projeto */}
             <div className="p-6">
               <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                 {project.title}
@@ -123,7 +123,7 @@ const Projects = () => {
                 {project.description}
               </p>
               
-              {/* Technologies */}
+              {/* Tecnologias */}
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.technologies.map((tech) => (
                   <span
@@ -135,15 +135,15 @@ const Projects = () => {
                 ))}
               </div>
               
-              {/* Actions */}
+              {/* Ações */}
               <div className="flex gap-3">
                 <button className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                   <Github className="w-4 h-4" />
-                  <span>Code</span>
+                  <span>Código</span>
                 </button>
                 <button className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
                   <ExternalLink className="w-4 h-4" />
-                  <span>Live Demo</span>
+                  <span>Demo ao Vivo</span>
                 </button>
               </div>
             </div>
