@@ -45,7 +45,7 @@ const Me = () => {
                 <p className="text-primary font-medium mb-3">AI & Full Stack Developer</p>
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <MapPin className="w-4 h-4" />
-                  <span>San Francisco, CA</span>
+                  <span>Alagoas, Brasil</span>
                 </div>
               </div>
             </div>
