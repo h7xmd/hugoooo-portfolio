@@ -21,22 +21,22 @@ const skillCategories = [
       { name: "Python", level: 85 },
       { name: "PostgreSQL", level: 82 },
       { name: "GraphQL", level: 78 },
-      { name: "REST APIs", level: 92 },
+      { name: "APIs REST", level: 92 },
     ],
   },
   {
-    title: "AI & ML",
+    title: "IA & ML",
     color: "from-pastel-pink to-pastel-peach",
     skills: [
       { name: "OpenAI", level: 90 },
       { name: "LangChain", level: 85 },
       { name: "TensorFlow", level: 70 },
-      { name: "Prompt Engineering", level: 88 },
-      { name: "RAG Systems", level: 82 },
+      { name: "Engenharia de Prompts", level: 88 },
+      { name: "Sistemas RAG", level: 82 },
     ],
   },
   {
-    title: "Tools & Others",
+    title: "Ferramentas & Outros",
     color: "from-pastel-purple to-pastel-pink",
     skills: [
       { name: "Git", level: 92 },
@@ -49,21 +49,21 @@ const skillCategories = [
 ];
 
 const softSkills = [
-  { name: "Problem Solving", emoji: "🧩" },
-  { name: "Team Leadership", emoji: "👥" },
-  { name: "Communication", emoji: "💬" },
-  { name: "Creativity", emoji: "💡" },
-  { name: "Adaptability", emoji: "🔄" },
-  { name: "Time Management", emoji: "⏰" },
+  { name: "Resolução de Problemas", emoji: "🧩" },
+  { name: "Liderança de Equipe", emoji: "👥" },
+  { name: "Comunicação", emoji: "💬" },
+  { name: "Criatividade", emoji: "💡" },
+  { name: "Adaptabilidade", emoji: "🔄" },
+  { name: "Gestão de Tempo", emoji: "⏰" },
 ];
 
 const Skills = () => {
   return (
     <PageLayout 
-      title="Skills" 
-      subtitle="Technologies and tools I work with"
+      title="Habilidades" 
+      subtitle="Tecnologias e ferramentas com as quais trabalho"
     >
-      {/* Technical Skills */}
+      {/* Habilidades Técnicas */}
       <div className="grid md:grid-cols-2 gap-8 mb-16">
         {skillCategories.map((category, categoryIndex) => (
           <motion.div

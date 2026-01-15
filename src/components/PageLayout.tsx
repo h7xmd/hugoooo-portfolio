@@ -16,7 +16,7 @@ const PageLayout = ({ children, title, subtitle }: PageLayoutProps) => {
       <BackgroundSwirls />
       
       <div className="relative z-10 container mx-auto px-4 py-8 md:py-12">
-        {/* Back button */}
+        {/* Botão voltar */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -27,11 +27,11 @@ const PageLayout = ({ children, title, subtitle }: PageLayoutProps) => {
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors duration-300 mb-8 group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-300" />
-            <span>Back to home</span>
+            <span>Voltar ao início</span>
           </Link>
         </motion.div>
         
-        {/* Header */}
+        {/* Cabeçalho */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -48,7 +48,7 @@ const PageLayout = ({ children, title, subtitle }: PageLayoutProps) => {
           )}
         </motion.div>
         
-        {/* Content */}
+        {/* Conteúdo */}
         {children}
       </div>
     </div>
